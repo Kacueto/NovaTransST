@@ -1,0 +1,14 @@
+---
+import Header from "../layouts/header.astro";
+import Footer from "../layouts/footer.astro";
+---
+
+<Header />
+
+<main
+  class="min-h-screen bg-[#FFFFFF] flex flex-col pt-20"
+>
+  <slot />
+</main>
+
+<Footer />

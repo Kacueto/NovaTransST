@@ -1,16 +1,17 @@
 ---
-
+import Body from "../layouts/body.astro";
+import "../styles/global.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Body>
+  <h1>hola</h1>
+  <img
+    src="/novatransIcon.png"
+    alt="Logo NovaTrans"
+    style="width:150px; height:auto;"
+  />
+  <h1 class="text-5xl font-bold text-[#093C63]">
+    🚀 Hola, soy mi Landing con Astro + Tailwind
+  </h1>
+
+</Body>

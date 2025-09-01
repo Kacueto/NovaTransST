@@ -1,0 +1,103 @@
+---
+let open = false;
+function toggleMenu() {
+  open = !open;
+}
+---
+
+<nav class="relative">
+  <!-- Desktop menu -->
+  <ul class="hidden md:flex space-x-4 items-center">
+    <li><a href="/" class="hover:text-[#ED823A] font-bold">Inicio</a></li>
+    <li>
+      <a href="/servicies" class="hover:text-[#ED823A] font-bold">Servicios</a>
+    </li>
+    <li>
+      <a href="/destinations" class="hover:text-[#ED823A] font-bold"
+        >Destinos</a>
+    </li>
+    <li>
+      <a href="/schedules" class="hover:text-[#ED823A] font-bold">Horarios</a>
+    </li>
+    <li>
+      <a href="/about" class="hover:text-[#ED823A] font-bold">Nosotros</a>
+    </li>
+    <li>
+      <a href="/contact" class="hover:text-[#ED823A] font-bold">Contacto</a>
+    </li>
+    <li>
+      <a
+        href="#"
+        class="bg-[#E8782F] text-white font-bold px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-[#ED823A] transition"
+        >Reservar tu viaje</a
+      >
+    </li>
+  </ul>
+
+  <!-- Mobile hamburger -->
+  <button
+    id="menu-btn"
+    class="md:hidden flex flex-col justify-center items-center w-10 h-10 border rounded text-white bg-[#E8782F]"
+    aria-label="Abrir menú"
+    type="button"
+  >
+    <span class="block w-7 h-1 bg-white rounded my-0.5"></span>
+    <span class="block w-7 h-1 bg-white rounded my-0.5"></span>
+    <span class="block w-7 h-1 bg-white rounded my-0.5"></span>
+  </button>
+
+  <ul
+    id="mobile-menu"
+    class="hidden absolute right-0 top-12 bg-[#155079] text-white w-56 rounded-lg shadow-lg flex-col space-y-2 p-4 z-50"
+  >
+    <li><a href="/" class="hover:text-[#ED823A] font-bold">Inicio</a></li>
+    <li>
+      <a href="/servicies" class="hover:text-[#ED823A] font-bold">Servicios</a>
+    </li>
+    <li>
+      <a href="/destinations" class="hover:text-[#ED823A] font-bold"
+        >Destinos</a>
+    </li>
+    <li>
+      <a href="/schedules" class="hover:text-[#ED823A] font-bold">Horarios</a>
+    </li>
+    <li>
+      <a href="/about" class="hover:text-[#ED823A] font-bold">Nosotros</a>
+    </li>
+    <li>
+      <a href="/contact" class="hover:text-[#ED823A] font-bold">Contacto</a>
+    </li>
+    <li>
+      <a
+        href="#"
+        class="bg-[#E8782F] text-white font-bold px-4 py-3 rounded-lg text-lg shadow-lg hover:bg-[#ED823A] transition block text-center"
+        >Reservar tu viaje</a
+      >
+    </li>
+  </ul>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      if (btn && menu) {
+        btn.addEventListener("click", function () {
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            menu.classList.add("flex");
+          } else {
+            menu.classList.add("hidden");
+            menu.classList.remove("flex");
+          }
+        });
+        // Cerrar el menú al hacer clic en cualquier enlace
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            menu.classList.add("hidden");
+            menu.classList.remove("flex");
+          });
+        });
+      }
+    });
+  </script>
+</nav>
