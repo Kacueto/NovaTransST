@@ -2,6 +2,8 @@
 import Header from "../layouts/header.astro";
 import Footer from "../layouts/footer.astro";
 import Reserve from "../components/reserve.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 const title =
   "NovaTrans ST | Transporte puerta a puerta en la Costa Colombiana";
 const description =
@@ -31,5 +33,7 @@ import "../styles/global.css";
 
     <Footer />
     <Reserve />
+    <SpeedInsights />
+    <Analytics />
   </body>
 </html>

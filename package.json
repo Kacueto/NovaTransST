@@ -1,7 +1,7 @@
 {
   "name": "novatransst",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -12,6 +12,8 @@
     "@astrojs/react": "^4.3.0",
     "@astrojs/sitemap": "^3.6.0",
     "@tailwindcss/vite": "^4.1.12",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.13.2",
     "leaflet": "^1.9.4",
     "react": "^19.1.1",
