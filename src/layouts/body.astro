@@ -2,6 +2,10 @@
 import Header from "../layouts/header.astro";
 import Footer from "../layouts/footer.astro";
 import Reserve from "../components/reserve.astro";
+const title =
+  "NovaTrans ST | Transporte puerta a puerta en la Costa Colombiana";
+const description =
+  "Servicio confiable de transporte de personas y encomiendas entre Barranquilla, Cartagena, Santa Marta, Riohacha, Maicao, Sincelejo y Montería. Traslados empresariales, aeropuertos y city tours.";
 import "../styles/global.css";
 ---
 
@@ -9,8 +13,14 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NovaTrans</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="transporte puerta a puerta, encomiendas, Barranquilla, Cartagena, Santa Marta, Montería, Riohacha, Maicao, Sincelejo, city tour"
+    />
     <link rel="icon" href="/novatransIcon.png" type="image/png" />
+    <link rel="canonical" href="https://novatransst.com" />
   </head>
   <body>
     <Header />

@@ -24,10 +24,7 @@ const Mapa = () => {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/">OSM</a>',
             }).addTo(mapInstance);
 
-            // Marcadores
-            Object.entries(cities).forEach(([name, coords]) => {
-                L.marker(coords).addTo(mapInstance).bindPopup(name);
-            });
+            // Marcadores: removidos - ahora mostramos solo las polilíneas
 
             // Líneas desde Barranquilla a los otros
             Object.entries(cities).forEach(([name, coords]) => {
@@ -37,6 +34,17 @@ const Mapa = () => {
                         weight: 3,
                     }).addTo(mapInstance);
                 }
+            });
+
+            // Agregar círculos blancos para cada ciudad (en lugar de marcadores)
+            Object.entries(cities).forEach(([name, coords]) => {
+                L.circleMarker(coords, {
+                    radius: 6,
+                    fillColor: '#ffffff',
+                    color: '#E8782F',
+                    weight: 2,
+                    fillOpacity: 1,
+                }).addTo(mapInstance).bindPopup(name);
             });
 
             // Ajustar bounds para que se vean todas las ciudades en pantallas grandes
@@ -67,7 +75,7 @@ const Mapa = () => {
     }, []);
 
     // Responsive heights: small screens shorter, larger screens take more vertical space
-    return <div id="map" className="w-full rounded-xl shadow-lg z-10 h-64 sm:h-80 md:h-[60vh] lg:h-[70vh] xl:h-[75vh]"  />;
+    return <div id="map" className="w-full rounded-xl shadow-lg z-10 h-64 sm:h-80 md:h-[60vh] lg:h-[70vh] xl:h-[75vh]" />;
 };
 
 export default Mapa;

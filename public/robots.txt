@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://novatransst.com/sitemap.xml
