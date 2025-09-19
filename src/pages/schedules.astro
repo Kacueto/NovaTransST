@@ -1,0 +1,126 @@
+---
+import Body from "../layouts/body.astro";
+---
+
+<Body>
+    <section class="relative bg-[#0B2545] py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+            Horarios de salidas
+        </h1>
+        <p class="mt-2 text-lg text-gray-300">
+            Consulta fácilmente los horarios disponibles para cada destino y
+            planifica tu viaje con confianza.
+        </p>
+    </section>
+
+    <!-- Sección Horarios (Acordeón) -->
+    <section class="max-w-3xl mx-auto px-4 py-12">
+        <div class="space-y-4">
+            <!-- Barranquilla – Cartagena -->
+            <details class="border rounded-lg shadow-sm">
+                <summary
+                    class="cursor-pointer px-4 py-3 text-lg font-semibold bg-gray-50 flex justify-between items-center"
+                >
+                    Barranquilla - Cartagena
+                    <span class="text-orange-500 text-xl font-bold">+</span>
+                </summary>
+                <div class="px-4 py-3 text-gray-700">
+                    <p>
+                        ⏰ Salidas: 6:00 am, 8:00 am, 10:00 am, 12:00 pm, 2:00
+                        pm, 4:00 pm
+                    </p>
+                    <button
+                        class="mt-3 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"
+                        data-open-reserva
+                    >
+                        Reservar tu viaje
+                    </button>
+                </div>
+            </details>
+
+            <!-- Barranquilla – Santa Marta -->
+            <details class="border rounded-lg shadow-sm">
+                <summary
+                    class="cursor-pointer px-4 py-3 text-lg font-semibold bg-gray-50 flex justify-between items-center"
+                >
+                    Barranquilla - Santa Marta
+                    <span class="text-orange-500 text-xl font-bold">+</span>
+                </summary>
+                <div class="px-4 py-3 text-gray-700">
+                    <p>
+                        ⏰ Salidas: 6:00 am, 8:00 am, 10:00 am, 12:00 pm, 2:00
+                        pm, 4:00 pm
+                    </p>
+                    <button
+                        class="mt-3 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"
+                        data-open-reserva
+                    >
+                        Reservar tu viaje
+                    </button>
+                </div>
+            </details>
+
+            <!-- Barranquilla – Sincelejo / Montería -->
+            <details class="border rounded-lg shadow-sm">
+                <summary
+                    class="cursor-pointer px-4 py-3 text-lg font-semibold bg-gray-50 flex justify-between items-center"
+                >
+                    Barranquilla - Sincelejo / Montería
+                    <span class="text-orange-500 text-xl font-bold">+</span>
+                </summary>
+                <div class="px-4 py-3 text-gray-700">
+                    <p>⏰ Salida: 4:00 am</p>
+                    <button
+                        class="mt-3 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"
+                        data-open-reserva
+                    >
+                        Reservar tu viaje
+                    </button>
+                </div>
+            </details>
+
+            <!-- Barranquilla – Riohacha / Maicao -->
+            <details class="border rounded-lg shadow-sm">
+                <summary
+                    class="cursor-pointer px-4 py-3 text-lg font-semibold bg-gray-50 flex justify-between items-center"
+                >
+                    Barranquilla - Riohacha / Maicao
+                    <span class="text-orange-500 text-xl font-bold">+</span>
+                </summary>
+                <div class="px-4 py-3 text-gray-700">
+                    <p>⏰ Salida: 4:00 am</p>
+                    <button
+                        class="mt-3 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"
+                        data-open-reserva
+                    >
+                        Reservar tu viaje
+                    </button>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Notas -->
+    <section class="max-w-2xl mx-auto px-4 py-8 text-gray-600 text-sm">
+        <p>⚠️ Los horarios pueden variar en festivos.</p>
+        <p>⚠️ Se recomienda reservar con anticipación.</p>
+        <p>📍 Salidas desde la Terminal Principal de Barranquilla.</p>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="bg-orange-50 py-12 text-center">
+        <h2 class="text-2xl font-bold text-gray-800">
+            Reserva tu viaje con tranquilidad
+        </h2>
+        <p class="mt-2 text-gray-600">
+            Ya sea por negocios, turismo o encomiendas, tenemos un destino para
+            ti.
+        </p>
+        <button
+            class="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl text-lg shadow-lg"
+            data-open-reserva
+        >
+            Reservar ahora
+        </button>
+    </section>
+</Body>

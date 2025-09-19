@@ -1,0 +1,166 @@
+---
+import "../styles/global.css";
+import Body from "../layouts/body.astro";
+---
+
+<Body>
+    <section
+        class="relative bg-[#0B2545] text-white py-20 px-4 overflow-hidden"
+    >
+        <div class="container mx-auto text-center px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                Viaja con nosotros a los principales destinos del Caribe
+                Colombiano
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+                Conectamos ciudades, negocios y experiencias en un solo
+                servicio.
+            </p>
+        </div>
+        <div class="absolute inset-0"></div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Cartagena -->
+            <div
+                class="bg-[#F9FAFB] p-6 rounded-xl shadow hover:shadow-lg transition"
+            >
+                <h3 class="text-2xl font-bold text-[#0B2545] mb-2">
+                    Cartagena
+                </h3>
+                <p class="text-[#E8782F] mb-2">
+                    📍 Ciudad histórica y turística
+                </p>
+                <p class="text-gray-600 mb-4">
+                    Rutas cada 2 horas desde Barranquilla. Ideal para viajes
+                    familiares, turismo y negocios.
+                </p>
+                <a
+                    href="#"
+                    data-open-reserva
+                    class="bg-[#E8782F] text-white px-4 py-2 rounded-lg hover:bg-[#ED823A]"
+                    >Reservar viaje</a
+                >
+            </div>
+
+            <!-- Santa Marta -->
+            <div
+                class="bg-[#F9FAFB] p-6 rounded-xl shadow hover:shadow-lg transition"
+            >
+                <h3 class="text-2xl font-bold text-[#0B2545] mb-2">
+                    Santa Marta
+                </h3>
+                <p class="text-[#E8782F] mb-2">
+                    📍 Puerta de entrada al Tayrona
+                </p>
+                <p class="text-gray-600 mb-4">
+                    Conexiones frecuentes desde Barranquilla. Perfecto para
+                    vacaciones y transporte de encomiendas.
+                </p>
+                <a
+                    href="#"
+                    data-open-reserva
+                    class="bg-[#E8782F] text-white px-4 py-2 rounded-lg hover:bg-[#ED823A]"
+                    >Reservar viaje</a
+                >
+            </div>
+
+            <!-- Montería -->
+            <div
+                class="bg-[#F9FAFB] p-6 rounded-xl shadow hover:shadow-lg transition"
+            >
+                <h3 class="text-2xl font-bold text-[#0B2545] mb-2">Montería</h3>
+                <p class="text-[#E8782F] mb-2">
+                    📍 Centro empresarial del Sinú
+                </p>
+                <p class="text-gray-600 mb-4">
+                    Salidas desde Barranquilla en horarios fijos. Ideal para
+                    trabajo y encomiendas.
+                </p>
+                <a
+                    href="#"
+                    data-open-reserva
+                    class="bg-[#E8782F] text-white px-4 py-2 rounded-lg hover:bg-[#ED823A]"
+                    >Reservar viaje</a
+                >
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-[#F9FAFB]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-[#0B2545] mb-6 text-center">
+                Frecuencia de viajes
+            </h2>
+            <div class="space-y-6 max-w-2xl mx-auto">
+                <div class="bg-white shadow rounded-lg p-4">
+                    🚌 <strong>Barranquilla – Cartagena / Santa Marta</strong
+                    ><br />
+                    ⏰ Cada 2 horas, de 6:00 am a 4:00 pm
+                </div>
+                <div class="bg-white shadow rounded-lg p-4">
+                    🚌 <strong>Barranquilla – Sincelejo / Montería</strong><br
+                    />
+                    ⏰ 6:00 am, 10:00 am y 2:00 pm
+                </div>
+                <div class="bg-white shadow rounded-lg p-4">
+                    🚌 <strong>Barranquilla – Riohacha / Maicao</strong><br />
+                    ⏰ 4:00 am
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-[#0B2545] mb-10">
+                Lo que dicen nuestros pasajeros
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 bg-[#F9FAFB] rounded-lg shadow">
+                    <p class="italic text-gray-700">
+                        “El viaje Barranquilla–Cartagena fue rápido y cómodo.
+                        100% recomendado.”
+                    </p>
+                    <p class="mt-4 font-bold text-[#093C63]">
+                        – Laura, Cartagena
+                    </p>
+                </div>
+                <div class="p-6 bg-[#F9FAFB] rounded-lg shadow">
+                    <p class="italic text-gray-700">
+                        “Siempre puntuales, viajo seguido a Santa Marta por
+                        trabajo y nunca fallan.”
+                    </p>
+                    <p class="mt-4 font-bold text-[#093C63]">
+                        – Andrés, Santa Marta
+                    </p>
+                </div>
+                <div class="p-6 bg-[#F9FAFB] rounded-lg shadow">
+                    <p class="italic text-gray-700">
+                        “Usé el servicio de encomiendas a Montería y fue
+                        excelente, llegó a tiempo.”
+                    </p>
+                    <p class="mt-4 font-bold text-[#093C63]">
+                        – Carolina, Montería
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-[#0B2545] text-center text-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Ya sea por negocios, turismo o encomiendas, tenemos un destino
+                para ti.
+            </h2>
+            <p class="mb-8 text-gray-300">
+                Reserva ahora y viaja con tranquilidad.
+            </p>
+            <a
+                href="#"
+                data-open-reserva
+                class="bg-[#E8782F] hover:bg-[#ED823A] text-white px-8 py-4 rounded-lg text-lg font-bold shadow-lg transition"
+            >
+                Reservar ahora
+            </a>
+        </div>
+    </section>
+</Body>

@@ -1,0 +1,212 @@
+---
+
+---
+
+<div
+    id="reserva-modal"
+    class="hidden fixed inset-0 bg-opacity-50 flex items-center justify-center z-50"
+>
+    <!-- Fondo oscuro (overlay) -->
+    <div
+        id="modal-overlay"
+        class="absolute inset-0 bg-opacity-0 backdrop-blur-sm"
+    >
+    </div>
+
+    <!-- Caja del modal (estilos como contact.astro) -->
+    <div
+        class="relative bg-[#F5F6FA] rounded-2xl shadow-md w-full max-w-lg max-h-[90vh] overflow-y-auto z-50 mx-2 sm:mx-0 p-6"
+    >
+        <!-- Botón cerrar -->
+        <button
+            id="modal-close"
+            class="absolute top-3 right-3 text-gray-600 hover:text-black text-2xl font-bold"
+            title="Cerrar"
+        >
+            &times;
+        </button>
+
+        <h2
+            class="text-3xl md:text-4xl font-bold text-[#093C63] text-center mb-4"
+        >
+            Reservar tu viaje
+        </h2>
+
+        <!-- Formulario (estilizado como contact) -->
+        <form id="reserva-form" class="space-y-4">
+            <div>
+                <label
+                    for="servicio"
+                    class="block text-sm font-bold text-[#093C63]"
+                    >Tipo de servicio</label
+                >
+                <select
+                    id="servicio"
+                    class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                    required
+                >
+                    <option value="">Seleccione</option>
+                    <option>Transporte de personas puerta a puerta</option>
+                    <option>Transporte de encomiendas</option>
+                    <option>Traslados empresariales</option>
+                    <option>Traslados aeropuerto</option>
+                    <option>City tours</option>
+                </select>
+            </div>
+
+            <div>
+                <label
+                    for="origen"
+                    class="block text-sm font-bold text-[#093C63]">Origen</label
+                >
+                <input
+                    type="text"
+                    id="origen"
+                    name="origen"
+                    placeholder="Barranquilla"
+                    class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                    required
+                />
+            </div>
+
+            <div>
+                <label
+                    for="destino"
+                    class="block text-sm font-bold text-[#093C63]"
+                    >Destino</label
+                >
+                <input
+                    type="text"
+                    id="destino"
+                    name="destino"
+                    placeholder="Cartagena"
+                    class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                    required
+                />
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label
+                        for="fecha"
+                        class="block text-sm font-bold text-[#093C63]"
+                        >Fecha</label
+                    >
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha"
+                        class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                        required
+                    />
+                </div>
+            </div>
+
+            <div>
+                <label
+                    for="cantidad"
+                    class="block text-sm font-bold text-[#093C63]"
+                    >Pasajeros / Paquetes</label
+                >
+                <input
+                    type="number"
+                    id="cantidad"
+                    name="cantidad"
+                    placeholder="Ej: 3"
+                    min="1"
+                    required
+                    class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                />
+            </div>
+
+            <div>
+                <label
+                    for="nombre"
+                    class="block text-sm font-bold text-[#093C63]"
+                    >Nombre completo</label
+                >
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    required
+                    class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                />
+            </div>
+
+            <div>
+                <button
+                    type="submit"
+                    class="bg-[#E8782F] hover:bg-[#ED823A] text-white font-bold px-6 py-3 rounded-lg w-full transition"
+                    >Enviar a WhatsApp</button
+                >
+            </div>
+        </form>
+    </div>
+</div>
+
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("reserva-modal");
+        const closeBtn = document.getElementById("modal-close");
+        const overlay = document.getElementById("modal-overlay");
+        const form = document.getElementById("reserva-form");
+
+        // Abrir modal
+        document.querySelectorAll("[data-open-reserva]").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                modal.classList.remove("hidden");
+            });
+        });
+
+        // Cerrar modal
+        const closeModal = () => modal.classList.add("hidden");
+
+        closeBtn.addEventListener("click", closeModal);
+        overlay.addEventListener("click", closeModal);
+
+        // Cerrar con ESC
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+                closeModal();
+            }
+        });
+
+        // Enviar WhatsApp
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const servicio = form.elements["servicio"].value;
+            const origen = form.elements["origen"].value;
+            const destino = form.elements["destino"].value;
+            const fecha = form.elements["fecha"].value;
+            const cantidad = form.elements["cantidad"].value;
+            const nombre = form.elements["nombre"].value;
+
+            const telefono1 = "573017365890";
+            const telefono2 = "573017377154";
+
+            let telefono;
+            if (
+                servicio === "Transporte de encomiendas" ||
+                servicio === "Transporte de personas puerta a puerta"
+            ) {
+                telefono = telefono1;
+            } else {
+                telefono = telefono2;
+            }
+            let mensaje = `Hola, quiero reservar un servicio de ${servicio}.
+Origen: ${origen}
+Destino: ${destino}
+Fecha: ${fecha}
+Pasajeros/Paquetes: ${cantidad}
+Nombre: ${nombre}`;
+
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, "_blank");
+            closeModal();
+        });
+    });
+</script>

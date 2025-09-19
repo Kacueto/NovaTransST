@@ -1,14 +1,25 @@
 ---
 import Header from "../layouts/header.astro";
 import Footer from "../layouts/footer.astro";
+import Reserve from "../components/reserve.astro";
+import "../styles/global.css";
 ---
 
-<Header />
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaTrans</title>
+    <link rel="icon" href="/novatransIcon.png" type="image/png" />
+  </head>
+  <body>
+    <Header />
 
-<main
-  class="min-h-screen bg-[#FFFFFF] flex flex-col pt-20"
->
-  <slot />
-</main>
+    <main class="min-h-screen bg-[#E7EDF1] flex flex-col pt-25">
+      <slot />
+    </main>
 
-<Footer />
+    <Footer />
+    <Reserve />
+  </body>
+</html>

@@ -1,0 +1,196 @@
+---
+import Layout from "../layouts/body.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+    <!-- Hero -->
+    <section
+        class="relative bg-[#0B2545] text-white text-center py-20 px-4"
+        style="background-size: cover; background-position: center;"
+    >
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                Nuestros Servicios
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300">
+                Soluciones de transporte puerta a puerta para personas, empresas
+                y turismo en la Costa Caribe.
+            </p>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="bg-[#F9FAFB] py-16 px-4">
+        <div
+            class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+            <!-- Servicio -->
+            <div class="bg-white p-6 rounded-2xl shadow-md flex flex-col">
+                <h3 class="text-xl font-bold text-[#0B2545] mb-2">
+                    Transporte de personas puerta a puerta
+                </h3>
+                <p class="text-gray-600 mb-4">
+                    Viajes directos entre ciudades principales de la Costa
+                    Caribe, cómodos y seguros.
+                </p>
+                <button
+                    data-open-reserva
+                    class="mt-auto bg-[#FF7A00] hover:bg-[#ff8f26] text-white font-bold py-2 px-4 rounded-lg transition"
+                >
+                    Reservar ahora
+                </button>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-md flex flex-col">
+                <h3 class="text-xl font-bold text-[#0B2545] mb-2">
+                    Transporte de encomiendas
+                </h3>
+                <p class="text-gray-600 mb-4">
+                    Servicio rápido y confiable para enviar paquetes y
+                    documentos entre ciudades.
+                </p>
+                <button
+                    data-open-reserva
+                    class="mt-auto bg-[#FF7A00] hover:bg-[#ff8f26] text-white font-bold py-2 px-4 rounded-lg transition"
+                >
+                    Reservar ahora
+                </button>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-md flex flex-col">
+                <h3 class="text-xl font-bold text-[#0B2545] mb-2">
+                    Traslados empresariales
+                </h3>
+                <p class="text-gray-600 mb-4">
+                    Soluciones de transporte corporativo para reuniones, eventos
+                    y logística de personal.
+                </p>
+                <button
+                    data-open-reserva
+                    class="mt-auto bg-[#FF7A00] hover:bg-[#ff8f26] text-white font-bold py-2 px-4 rounded-lg transition"
+                >
+                    Reservar ahora
+                </button>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-md flex flex-col">
+                <h3 class="text-xl font-bold text-[#0B2545] mb-2">
+                    Traslados aeropuerto
+                </h3>
+                <p class="text-gray-600 mb-4">
+                    Transporte desde y hacia los aeropuertos de la región,
+                    puntual y seguro.
+                </p>
+                <button
+                    data-open-reserva
+                    class="mt-auto bg-[#FF7A00] hover:bg-[#ff8f26] text-white font-bold py-2 px-4 rounded-lg transition"
+                >
+                    Reservar ahora
+                </button>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-md flex flex-col">
+                <h3 class="text-xl font-bold text-[#0B2545] mb-2">
+                    City tours
+                </h3>
+                <p class="text-gray-600 mb-4">
+                    Recorridos turísticos privados en ciudades como Cartagena,
+                    Santa Marta y Barranquilla.
+                </p>
+                <button
+                    data-open-reserva
+                    class="mt-auto bg-[#FF7A00] hover:bg-[#ff8f26] text-white font-bold py-2 px-4 rounded-lg transition"
+                >
+                    Reservar ahora
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabla de horarios -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-[#0B2545] text-center mb-6">
+                Horarios y destinos frecuentes
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full border border-gray-200 text-left">
+                    <thead class="bg-[#0B2545] text-white">
+                        <tr>
+                            <th class="py-3 px-4">Ruta</th>
+                            <th class="py-3 px-4">Horarios disponibles</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="py-3 px-4">Barranquilla - Cartagena</td>
+                            <td class="py-3 px-4">Cada 2 horas de 6am a 4pm</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Barranquilla - Santa Marta</td
+                            >
+                            <td class="py-3 px-4">Cada 2 horas de 6am a 4pm</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4"
+                                >Barranquilla - Sincelejo / Montería</td
+                            >
+                            <td class="py-3 px-4">4am</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4"
+                                >Barranquilla - Riohacha / Maicao</td
+                            >
+                            <td class="py-3 px-4">4am</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="bg-[#F9FAFB] py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-[#0B2545] mb-6">
+                ¿Por qué elegirnos?
+            </h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <li class="bg-white rounded-xl p-6 shadow-md">
+                    <p class="font-bold text-[#0B2545]">
+                        Conductores certificados
+                    </p>
+                </li>
+                <li class="bg-white rounded-xl p-6 shadow-md">
+                    <p class="font-bold text-[#0B2545]">
+                        Puntualidad garantizada
+                    </p>
+                </li>
+                <li class="bg-white rounded-xl p-6 shadow-md">
+                    <p class="font-bold text-[#0B2545]">
+                        Vehículos cómodos y modernos
+                    </p>
+                </li>
+                <li class="bg-white rounded-xl p-6 shadow-md">
+                    <p class="font-bold text-[#0B2545]">
+                        Atención personalizada
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 px-4 text-center">
+        <h2 class="text-3xl font-bold text-[#0B2545] mb-4">
+            Reserva tu viaje ahora con un solo clic
+        </h2>
+        <button
+            data-open-reserva
+            class="bg-[#FF7A00] hover:bg-[#ff8f26] text-white font-bold px-8 py-4 rounded-lg text-lg transition"
+        >
+            Reservar ahora
+        </button>
+    </section>
+</Layout>

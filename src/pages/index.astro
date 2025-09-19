@@ -1,17 +1,21 @@
 ---
 import Body from "../layouts/body.astro";
-import "../styles/global.css";
+
+import CarouselReact from "../components/carouselReact";
+import Services from "../components/services.astro";
+import Destinations from "../components/destinations.astro";
+import Schedules from "../components/schedules.astro";
+import About from "../components/about.astro";
+import Contact from "../components/contact.astro";
+import Faq from "../components/faq.astro";
 ---
 
 <Body>
-  <h1>hola</h1>
-  <img
-    src="/novatransIcon.png"
-    alt="Logo NovaTrans"
-    style="width:150px; height:auto;"
-  />
-  <h1 class="text-5xl font-bold text-[#093C63]">
-    🚀 Hola, soy mi Landing con Astro + Tailwind
-  </h1>
-
+  <CarouselReact client:load />
+  <Services/>
+  <Destinations />
+  <Schedules />
+  <Contact />
+  <About />
+  <Faq />
 </Body>

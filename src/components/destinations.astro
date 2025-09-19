@@ -1,0 +1,62 @@
+---
+import Map from "./map";
+---
+
+<section class="py-16 bg-[#E7EDF1]">
+    <div class="container mx-auto px-4">
+        <h2
+            class="text-3xl md:text-4xl font-bold text-center text-[#093C63] mb-10"
+        >
+            Conectamos las principales ciudades de la Costa
+        </h2>
+
+        <Map client:visible />
+
+        <ul
+            class="max-w-3xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg font-medium text-gray-800"
+        >
+            <li
+                class="flex items-center justify-between bg-white px-6 py-4 rounded-xl shadow"
+            >
+                <span>Barranquilla</span>
+                <span class="text-[#E8782F]">↔</span>
+                <span>Cartagena</span>
+            </li>
+            <li
+                class="flex items-center justify-between bg-white px-6 py-4 rounded-xl shadow"
+            >
+                <span>Barranquilla</span>
+                <span class="text-[#E8782F]">↔</span>
+                <span>Santa Marta</span>
+            </li>
+            <li
+                class="flex items-center justify-between bg-white px-6 py-4 rounded-xl shadow"
+            >
+                <span>Barranquilla</span>
+                <span class="text-[#E8782F]">→</span>
+                <span>Riohacha</span>
+            </li>
+            <li
+                class="flex items-center justify-between bg-white px-6 py-4 rounded-xl shadow"
+            >
+                <span>Barranquilla</span>
+                <span class="text-[#E8782F]">→</span>
+                <span>Sincelejo</span>
+            </li>
+            <li
+                class="flex items-center justify-between bg-white px-6 py-4 rounded-xl shadow"
+            >
+                <span>Barranquilla</span>
+                <span class="text-[#E8782F]">→</span>
+                <span>Montería</span>
+            </li>
+            <li
+                class="flex items-center justify-between bg-white px-6 py-4 rounded-xl shadow"
+            >
+                <span>Barranquilla</span>
+                <span class="text-[#E8782F]">→</span>
+                <span>Maicao</span>
+            </li>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,139 @@
+<section id="contacto" class="py-20">
+    <div class="container mx-auto px-6 lg:px-16">
+        <h2
+            class="text-3xl md:text-4xl font-bold text-[#093C63] text-center mb-10"
+        >
+            Contáctanos
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- 📩 Formulario -->
+            <!-- Reemplaza FORM_ID por tu ID de Formspree -->
+            <form
+                action="https://formspree.io/f/mdklqkee"
+                method="POST"
+                class="bg-[#F5F6FA] p-6 rounded-2xl shadow-md space-y-4"
+            >
+                <!-- Anti-bot honeypot -->
+                <input type="text" name="_gotcha" style="display:none" />
+                <!-- Personaliza el asunto del email enviado -->
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="Nuevo contacto desde la web - NovaTrans"
+                />
+                <div>
+                    <label
+                        for="name"
+                        class="block text-sm font-bold text-[#093C63]"
+                        >Nombre</label
+                    >
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Tu nombre"
+                        class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label
+                        for="phone"
+                        class="block text-sm font-bold text-[#093C63]"
+                        >Teléfono</label
+                    >
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+57 300 000 0000"
+                        class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label
+                        for="email"
+                        class="block text-sm font-bold text-[#093C63]"
+                        >Correo</label
+                    >
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="tu@correo.com"
+                        class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label
+                        for="destino"
+                        class="block text-sm font-bold text-[#093C63]"
+                        >Destino</label
+                    >
+                    <input
+                        type="text"
+                        id="destino"
+                        name="destino"
+                        placeholder="Ej: Cartagena"
+                        class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                    />
+                </div>
+
+                <div>
+                    <label
+                        for="message"
+                        class="block text-sm font-bold text-[#093C63]"
+                        >Mensaje</label
+                    >
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Escribe tu mensaje"
+                        class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#E8782F]"
+                    ></textarea>
+                </div>
+
+                <button
+                    type="submit"
+                    class="bg-[#E8782F] hover:bg-[#ED823A] text-white font-bold px-6 py-3 rounded-lg w-full transition"
+                >
+                    Enviar mensaje
+                </button>
+            </form>
+
+            <!-- 📞 Información -->
+            <div class="flex flex-col justify-center space-y-6">
+                <p class="text-lg text-gray-700">
+                    Puedes comunicarte con nosotros por cualquiera de estos
+                    medios:
+                </p>
+                <div>
+                    <h3 class="font-bold text-[#093C63]">Teléfonos</h3>
+                    <p class="text-gray-600">+57 301 737 7154</p>
+                    <p class="text-gray-600">+57 301 746 5890</p>
+                </div>
+                <!--
+                <div>
+                    <h3 class="font-bold text-[#093C63]">Dirección</h3>
+                    <p class="text-gray-600">
+                        Cra 45 #80-23, Barranquilla, Colombia
+                    </p>
+                </div>
+                -->
+                <div>
+                    <h3 class="font-bold text-[#093C63]">Correo</h3>
+                    <p class="text-gray-600">novatransst@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</section>

@@ -10,11 +10,11 @@ function toggleMenu() {
   <ul class="hidden md:flex space-x-4 items-center">
     <li><a href="/" class="hover:text-[#ED823A] font-bold">Inicio</a></li>
     <li>
-      <a href="/servicies" class="hover:text-[#ED823A] font-bold">Servicios</a>
+      <a href="/services" class="hover:text-[#ED823A] font-bold">Servicios</a>
     </li>
     <li>
-      <a href="/destinations" class="hover:text-[#ED823A] font-bold"
-        >Destinos</a>
+      <a href="/destinations" class="hover:text-[#ED823A] font-bold">Destinos</a
+      >
     </li>
     <li>
       <a href="/schedules" class="hover:text-[#ED823A] font-bold">Horarios</a>
@@ -23,11 +23,9 @@ function toggleMenu() {
       <a href="/about" class="hover:text-[#ED823A] font-bold">Nosotros</a>
     </li>
     <li>
-      <a href="/contact" class="hover:text-[#ED823A] font-bold">Contacto</a>
-    </li>
-    <li>
       <a
         href="#"
+        data-open-reserva
         class="bg-[#E8782F] text-white font-bold px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-[#ED823A] transition"
         >Reservar tu viaje</a
       >
@@ -52,11 +50,11 @@ function toggleMenu() {
   >
     <li><a href="/" class="hover:text-[#ED823A] font-bold">Inicio</a></li>
     <li>
-      <a href="/servicies" class="hover:text-[#ED823A] font-bold">Servicios</a>
+      <a href="/services" class="hover:text-[#ED823A] font-bold">Servicios</a>
     </li>
     <li>
-      <a href="/destinations" class="hover:text-[#ED823A] font-bold"
-        >Destinos</a>
+      <a href="/destinations" class="hover:text-[#ED823A] font-bold">Destinos</a
+      >
     </li>
     <li>
       <a href="/schedules" class="hover:text-[#ED823A] font-bold">Horarios</a>
@@ -64,12 +62,11 @@ function toggleMenu() {
     <li>
       <a href="/about" class="hover:text-[#ED823A] font-bold">Nosotros</a>
     </li>
-    <li>
-      <a href="/contact" class="hover:text-[#ED823A] font-bold">Contacto</a>
-    </li>
+    
     <li>
       <a
         href="#"
+        data-open-reserva
         class="bg-[#E8782F] text-white font-bold px-4 py-3 rounded-lg text-lg shadow-lg hover:bg-[#ED823A] transition block text-center"
         >Reservar tu viaje</a
       >
@@ -77,27 +74,80 @@ function toggleMenu() {
   </ul>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const btn = document.getElementById("menu-btn");
-      const menu = document.getElementById("mobile-menu");
-      if (btn && menu) {
-        btn.addEventListener("click", function () {
-          if (menu.classList.contains("hidden")) {
-            menu.classList.remove("hidden");
-            menu.classList.add("flex");
-          } else {
-            menu.classList.add("hidden");
-            menu.classList.remove("flex");
+    (function () {
+      function initHeaderMenu() {
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+
+        if (btn && menu) {
+          // evitar duplicar listeners
+          if (!btn.getAttribute("_menuBound")) {
+            btn.addEventListener("click", function () {
+              if (menu.classList.contains("hidden")) {
+                menu.classList.remove("hidden");
+                menu.classList.add("flex");
+              } else {
+                menu.classList.add("hidden");
+                menu.classList.remove("flex");
+              }
+            });
+            btn.setAttribute("_menuBound", "1");
           }
-        });
-        // Cerrar el menú al hacer clic en cualquier enlace
-        menu.querySelectorAll("a").forEach(function (link) {
-          link.addEventListener("click", function () {
-            menu.classList.add("hidden");
-            menu.classList.remove("flex");
+
+          // Cerrar el menú al hacer clic en cualquier enlace
+          menu.querySelectorAll("a").forEach(function (link) {
+            if (!link.getAttribute("_closeBound")) {
+              link.addEventListener("click", function () {
+                menu.classList.add("hidden");
+                menu.classList.remove("flex");
+              });
+              link.setAttribute("_closeBound", "1");
+            }
           });
-        });
+        }
+
+        // Abrir modal de reserva desde cualquier botón con data-open-reserva
+        var openBtns = document.querySelectorAll("[data-open-reserva]");
+        if (!openBtns || openBtns.length === 0) {
+          // nothing to do but not an error
+        } else {
+          openBtns.forEach(function (b) {
+            if (!b.getAttribute("_openBound")) {
+              b.addEventListener("click", function (e) {
+                e.preventDefault();
+                var modal = document.getElementById("reserve");
+                if (modal) {
+                  modal.classList.remove("hidden");
+                  // focus al primer campo disponible
+                  setTimeout(function () {
+                    var first =
+                      document.getElementById("servicio") ||
+                      document.getElementById("origen");
+                    if (first && typeof first.focus === "function")
+                      first.focus();
+                  }, 100);
+                } else {
+                  console.warn("Reserva: no se encontró el elemento #reserve");
+                }
+
+                // cerrar menú mobile si está abierto
+                if (menu && !menu.classList.contains("hidden")) {
+                  menu.classList.add("hidden");
+                  menu.classList.remove("flex");
+                }
+              });
+              b.setAttribute("_openBound", "1");
+            }
+          });
+        }
       }
-    });
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initHeaderMenu);
+      } else {
+        // DOM already ready
+        initHeaderMenu();
+      }
+    })();
   </script>
 </nav>

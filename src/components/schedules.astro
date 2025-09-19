@@ -1,0 +1,133 @@
+<section class="py-16 bg-[#E7EDF1]">
+    <div class="container mx-auto px-4">
+        <h2
+            class="text-3xl md:text-4xl font-bold text-center text-[#093C63] mb-8"
+        >
+            Horarios de salida
+        </h2>
+
+        <!-- 📱 Tabla para desktop -->
+        <div class="hidden md:block overflow-x-auto">
+            <table
+                class="w-full border-collapse text-center shadow-lg rounded-xl overflow-hidden"
+            >
+                <thead>
+                    <tr class="bg-[#093C63] text-white">
+                        <th class="px-4 py-3">Hora</th>
+                        <th class="px-4 py-3">Cartagena</th>
+                        <th class="px-4 py-3">Santa Marta</th>
+                        <th class="px-4 py-3">Sincelejo</th>
+                        <th class="px-4 py-3">Montería</th>
+                        <th class="px-4 py-3">Riohacha</th>
+                        <th class="px-4 py-3">Maicao</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 4am -->
+                    <tr class="bg-gray-50">
+                        <td class="px-4 py-3 font-semibold">4:00 am</td>
+                        <td>✘</td><td>✘</td><td>✔</td><td>✔</td><td>✔</td><td
+                            >✔</td
+                        >
+                    </tr>
+                    <!-- 6am -->
+                    <tr>
+                        <td class="px-4 py-3 font-semibold">6:00 am</td>
+                        <td>✔</td><td>✔</td><td>✘</td><td>✘</td><td>✘</td><td
+                            >✘</td
+                        >
+                    </tr>
+                    <!-- 8am -->
+                    <tr class="bg-gray-50">
+                        <td class="px-4 py-3 font-semibold">8:00 am</td>
+                        <td>✔</td><td>✔</td><td>✘</td><td>✘</td><td>✘</td><td
+                            >✘</td
+                        >
+                    </tr>
+                    <!-- 10am -->
+                    <tr>
+                        <td class="px-4 py-3 font-semibold">10:00 am</td>
+                        <td>✔</td><td>✔</td><td>✘</td><td>✘</td><td>✘</td><td
+                            >✘</td
+                        >
+                    </tr>
+                    <!-- 12pm -->
+                    <tr class="bg-gray-50">
+                        <td class="px-4 py-3 font-semibold">12:00 pm</td>
+                        <td>✔</td><td>✔</td><td>✘</td><td>✘</td><td>✘</td><td
+                            >✘</td
+                        >
+                    </tr>
+                    <!-- 2pm -->
+                    <tr>
+                        <td class="px-4 py-3 font-semibold">2:00 pm</td>
+                        <td>✔</td><td>✔</td><td>✘</td><td>✘</td><td>✘</td><td
+                            >✘</td
+                        >
+                    </tr>
+                    <!-- 4pm -->
+                    <tr class="bg-gray-50">
+                        <td class="px-4 py-3 font-semibold">4:00 pm</td>
+                        <td>✔</td><td>✔</td><td>✘</td><td>✘</td><td>✘</td><td
+                            >✘</td
+                        >
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 📱 Vista responsive en móviles -->
+        <div class="md:hidden space-y-6">
+            <!-- Cartagena -->
+            <div class="bg-gray-50 shadow rounded-lg p-4">
+                <h3 class="text-lg font-semibold text-[#093C63] mb-2">
+                    Cartagena
+                </h3>
+                <p>✔ Salidas: 6am, 8am, 10am, 12pm, 2pm, 4pm</p>
+            </div>
+            <!-- Santa Marta -->
+            <div class="bg-gray-50 shadow rounded-lg p-4">
+                <h3 class="text-lg font-semibold text-[#093C63] mb-2">
+                    Santa Marta
+                </h3>
+                <p>✔ Salidas: 6am, 8am, 10am, 12pm, 2pm, 4pm</p>
+            </div>
+            <!-- Sincelejo -->
+            <div class="bg-gray-50 shadow rounded-lg p-4">
+                <h3 class="text-lg font-semibold text-[#093C63] mb-2">
+                    Sincelejo
+                </h3>
+                <p>✔ Salida especial: 4am</p>
+            </div>
+            <!-- Montería -->
+            <div class="bg-gray-50 shadow rounded-lg p-4">
+                <h3 class="text-lg font-semibold text-[#093C63] mb-2">
+                    Montería
+                </h3>
+                <p>✔ Salida especial: 4am</p>
+            </div>
+            <!-- Riohacha -->
+            <div class="bg-gray-50 shadow rounded-lg p-4">
+                <h3 class="text-lg font-semibold text-[#093C63] mb-2">
+                    Riohacha
+                </h3>
+                <p>✔ Salida especial: 4am</p>
+            </div>
+            <!-- Maicao -->
+            <div class="bg-gray-50 shadow rounded-lg p-4">
+                <h3 class="text-lg font-semibold text-[#093C63] mb-2">
+                    Maicao
+                </h3>
+                <p>✔ Salida especial: 4am</p>
+            </div>
+        </div>
+
+        <p class="text-center mt-6 text-gray-600">
+            ✔ Salidas disponibles &nbsp;&nbsp; ✘ No disponible
+        </p>
+        <p class="text-center mt-2 font-medium text-[#E8782F]">
+            Frecuencias cada 2 horas a Cartagena y Santa Marta. Viaje especial
+            4:00 am a Sincelejo, Montería, Riohacha y Maicao.
+        </p>
+    </div>
+</section>
