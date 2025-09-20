@@ -6,10 +6,10 @@
             Horarios de salida
         </h2>
 
-        <!-- 📱 Tabla para desktop -->
-        <div class="hidden md:block overflow-x-auto">
+        <!-- Tabla responsive (visible en móvil con scroll horizontal) -->
+        <div class="overflow-x-auto -mx-4 px-4">
             <table
-                class="w-full border-collapse text-center shadow-lg rounded-xl overflow-hidden"
+                class="min-w-max w-full border-collapse text-center shadow-lg rounded-xl overflow-hidden"
             >
                 <thead>
                     <tr class="bg-[#093C63] text-white">
@@ -76,8 +76,8 @@
             </table>
         </div>
 
-        <!-- 📱 Vista responsive en móviles -->
-        <div class="md:hidden space-y-6">
+        <!-- Mobile card view (oculto porque ahora mostramos la tabla en móvil) -->
+        <div class="hidden space-y-6">
             <!-- Cartagena -->
             <div class="bg-gray-50 shadow rounded-lg p-4">
                 <h3 class="text-lg font-semibold text-[#093C63] mb-2">
