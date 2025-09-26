@@ -1,13 +1,25 @@
 {
-  "name": "Novetrans",
-  "short_name": "Novetrans",
-  "icons": [
-    { "src": "/novetransIcon.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/novetransIcon.png", "sizes": "48x48", "type": "image/png" },
-    { "src": "/novetransIcon.png", "sizes": "32x32", "type": "image/png" }
-  ],
-  "start_url": "/",
-  "display": "standalone",
-  "theme_color": "#0B2545",
-  "background_color": "#ffffff"
+    "name": "Novetrans",
+    "short_name": "Novetrans",
+    "icons": [
+        {
+            "src": "/novetransIcon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/novetransIcon.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/novetransIcon.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#0B2545",
+    "background_color": "#ffffff"
 }
