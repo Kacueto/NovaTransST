@@ -20,32 +20,48 @@ import "../styles/global.css";
       name="keywords"
       content="transporte puerta a puerta, encomiendas, Barranquilla, Cartagena, Santa Marta, Montería, Riohacha, Maicao, Sincelejo, city tour"
     />
-    <link rel="icon" href="/novetransIcon.png" type="image/png" />
-    <link rel="canonical" href="https://novetrans.com" />
+  <!-- Favicons and PWA manifest (uses public/novetransIcon.png as fallback) -->
+  <link rel="icon" href="/novetransIcon.png" type="image/png" />
+  <link rel="icon" href="/novetransIcon.png" sizes="32x32" />
+  <link rel="icon" href="/novetransIcon.png" sizes="48x48" />
+  <link rel="shortcut icon" href="/novetransIcon.png" />
+  <link rel="apple-touch-icon" href="/novetransIcon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0B2545" />
+  <link rel="canonical" href="https://novetrans.com" />
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Novetrans",
-      "image": "https://novetrans.com/novatransIcon.png",
-      "@id": "https://novetrans.com",
-      "url": "https://novetrans.com",
-      "telephone": "+573017377154",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Cl. 32 #45-16, Nte. Centro Historico",
-        "addressLocality": "Barranquilla",
-        "addressRegion": "Atlántico",
-        "addressCountry": "CO",
-        "postalCode": "080001"
-      },
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-        "opens": "06:00",
-        "closes": "20:00"
-      }]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Novetrans",
+        "image": "https://novetrans.com/novatransIcon.png",
+        "@id": "https://novetrans.com",
+        "url": "https://novetrans.com",
+        "telephone": "+573017377154",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Cl. 32 #45-16, Nte. Centro Historico",
+          "addressLocality": "Barranquilla",
+          "addressRegion": "Atlántico",
+          "addressCountry": "CO",
+          "postalCode": "080001"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "06:00",
+            "closes": "20:00"
+          }
+        ]
+      }
     </script>
   </head>
   <body>
