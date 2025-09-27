@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://novetrans.com/sitemap.xml
+Sitemap: https://www.novetrans.com/sitemap.xml

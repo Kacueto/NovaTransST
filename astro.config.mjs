@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://novetrans.com',
+  site: 'https://www.novetrans.com',
   integrations: [react(), sitemap()],
   vite: {
     plugins: [tailwindcss()]
